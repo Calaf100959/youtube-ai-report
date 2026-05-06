@@ -1,0 +1,110 @@
+:root {
+  color-scheme: light;
+  --bg: #f6f4ef;
+  --ink: #1d2528;
+  --muted: #637176;
+  --line: #d8d2c4;
+  --panel: #ffffff;
+  --accent: #0f766e;
+  --accent-strong: #12433f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  line-height: 1.65;
+}
+
+a {
+  color: var(--accent-strong);
+}
+
+.page {
+  width: min(1040px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 48px 0 72px;
+}
+
+.header {
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+}
+
+.eyebrow,
+.channel,
+.published {
+  color: var(--muted);
+  font-size: 0.88rem;
+  margin: 0 0 6px;
+}
+
+h1 {
+  font-size: clamp(2rem, 6vw, 4rem);
+  line-height: 1.05;
+  margin: 0 0 16px;
+}
+
+h2 {
+  font-size: 1.35rem;
+  margin: 0 0 14px;
+}
+
+.summary,
+.reports {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.videos {
+  margin-top: 32px;
+}
+
+.video-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.video-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.video-card h3 {
+  font-size: 1.05rem;
+  line-height: 1.35;
+  margin: 0 0 10px;
+}
+
+.report-list {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.report-list a,
+.back {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+.empty {
+  color: var(--muted);
+}
+
